@@ -1,0 +1,13 @@
+public class AdvancedStats extends Stats //uses extra parameters to calculate with more complexity
+{
+    private double hoursExercised;
+    private double restingHeartRate;
+    private boolean studyMusic;
+
+    public AdvancedStats(){
+        super();
+        hoursExercised = 0;
+        restingHeartRate = 70;
+        studyMusic = false;
+    }
+}

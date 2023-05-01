@@ -1,0 +1,31 @@
+public class Stats
+{
+    private double timeWorked;
+    private double timeBreaked;
+    private double timeNotFocused;
+    private double efficiency;
+    private double sleep;
+
+    public Stats(){ //sets everything to zero (if detects an all 0 constructor, will return for Score n/a)
+        timeWorked = 0;
+        timeBreaked = 0;
+        timeNotFocused = 0;
+        efficiency = 0;
+        sleep = 0;
+    }
+
+    public Stats(double work, double breaked, double notFocused, double eff, double slp){ // initializes all variables with given inputs
+        timeWorked = work;
+        timeBreaked = breaked;
+        timeNotFocused = notFocused;
+        efficiency = eff;
+        sleep = slp;
+
+    }
+
+    public
+
+
+
+
+}

@@ -1,10 +1,5 @@
-public class Score
-{
-    private double timeWorked;
-    private double timeBreaked;
-    private double timeNotFocused;
-    private double efficiency;
-    private double sleep;
-
-
+public class Score{
+    public int scoreCalculator(double work, double breaked, double notFocused, double eff, double slp, double exercise, double dr, boolean music){
+        
+    }
 }
