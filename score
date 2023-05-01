@@ -1,0 +1,10 @@
+public class Score
+{
+    private double timeWorked;
+    private double timeBreaked;
+    private double timeNotFocused;
+    private double efficiency;
+    private double sleep;
+
+
+}
