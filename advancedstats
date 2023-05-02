@@ -10,4 +10,33 @@ public class AdvancedStats extends Stats //uses extra parameters to calculate wi
         restingHeartRate = 70;
         studyMusic = false;
     }
+
+    public AdvancedStats(double work, double breaked, double notFocused, double eff, double slp, double hExercised, double rhr, boolean music){
+        super(work, breaked, notFocused, eff, slp);
+        hoursExercised = hExercised;
+        restingHeartRate = rhr;
+        studyMusic = music;
+    }
+
+    public double getHoursExercised(){
+        return hoursExercised;
+    }
+
+    public double getRestingHeartRate(){
+        return restingHeartRate;
+    }
+
+    public double usingStudyMusic(){
+        return studyMusic;
+    }
+
+    public boolean advanced(){
+        return true;
+    }
+
+    public double workScore(){
+        return scoreCalculator(getTimeWorked, getTimeBreaked, getTimeNotFocused, getEfficiency, getSleep, hoursExercised, restingHeartRate, studyMusic);
+    }
+
+
 }
