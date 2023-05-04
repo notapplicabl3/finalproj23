@@ -1,8 +1,8 @@
 public class Score{
+    public static int scoreCalculator(double work, double breaked, double notFocused, double eff, double rh, double rest, double exercise, double dr, boolean music)
+    {
 
-    public int scoreCalculator(double work, double breaked, double notFocused, double eff, double rh, double rest, double exercise, double dr, boolean music){
-
-        if(work == 0){
+        if (work == 0){
             return -1;
         }
 
