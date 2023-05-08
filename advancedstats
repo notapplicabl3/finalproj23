@@ -35,7 +35,7 @@ public class AdvancedStats extends Stats //uses extra parameters to calculate wi
     }
 
     public double workScore(){
-        return scoreCalculator(getTimeWorked, getTimeBreaked, getTimeNotFocused, getEfficiency, getSleep, hoursExercised, restingHeartRate, studyMusic);
+        return scoreCalculator(getTimeWorked(), getTimeBreaked(), getTimeNotFocused(), getEfficiency(), getSleep(), hoursExercised, restingHeartRate, studyMusic);
     }
 
 

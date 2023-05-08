@@ -47,8 +47,8 @@ public class Stats
         return false;
     }
 
-    public double workScore(){
-        return scoreCalculator(timeWorked, timeBreaked, timeNotFocused, efficiency, sleep, 0, 70, false);
+    public int workScore(){
+        return scoreCalculator(timeWorked, timeBreaked, timeNotFocused, efficiency, sleep);
     }
 
 }
