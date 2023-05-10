@@ -1,4 +1,5 @@
-public class Score{
+public class score
+{
 
     public static int scoreCalculator(double work, double breaked, double notFocused, double eff, double rest)
     {
@@ -9,7 +10,7 @@ public class Score{
 
         double totalScore = 0;
 
-        totalScore += 700.0(1.05 - Math.abs(0.08 - (breaked / work))); // base score multiplied by a factor according to lengths taken in the work time
+        totalScore += 700.0 * (1.05 - Math.abs(0.08 - (breaked / work))); // base score multiplied by a factor according to lengths taken in the work time
 
         if (work <= 2){ // slightly decreases score for working less than 2 hours
             totalScore *= (1.00 - (2.0 * work / 100.0));
@@ -19,17 +20,19 @@ public class Score{
 
         totalScore *= (0.60 + eff / 20.0); // multiplies score by a factor according to the users input of percieved efficiency (1-10)
 
-        totalScore *= (1.05 - ( 1 / 2 )( (rest - 8.5) / 8.5) ) // multiplies the final score by a factor relative to how much sleep the user got
+        totalScore *= (1.05 - ( 1 / 2 ) * ( (rest - 8.5) / 8.5) ); // multiplies the final score by a factor relative to how much sleep the user got
 
-        
-        return totalScore;
+        int totalScoretruncated = (int) totalScore;
+
+
+        return totalScoretruncated;
 
     }
 
 
 
 
-    public static int scoreCalculator(double work, double breaked, double notFocused, double eff, double rest, double exercise, double rh, boolean music);
+    public static int scoreCalculator(double work, double breaked, double notFocused, double eff, double rest, double exercise, double rh, boolean music)
     {
 
         if (work == 0){
@@ -38,7 +41,7 @@ public class Score{
 
         double totalScore = 0;
 
-        totalScore += 700.0(1.05 - Math.abs(0.08 - (breaked / work))); // base score multiplied by a factor according to lengths taken in the work time
+        totalScore += 700.0 * (1.05 - Math.abs(0.08 - (breaked / work))); // base score multiplied by a factor according to lengths taken in the work time
 
         if (work <= 2){ // slightly decreases score for working less than 2 hours
             totalScore *= (1.00 - (2.0 * work / 100.0));
@@ -54,10 +57,13 @@ public class Score{
             totalScore *= 1.02;
         }
 
-        totalScore *= (1.05 - ( 1 / 2 )( (rest - 8.5) / 8.5) ) // multiplies the final score by a factor relative to how much sleep the user got
+        totalScore *= (1.05 - ( 1 / 2 ) * ( (rest - 8.5) / 8.5) ); // multiplies the final score by a factor relative to how much sleep the user got
 
         
-        return totalScore;
+        int totalScoretruncated = (int) totalScore;
+
+
+        return totalScoretruncated;
 
     }
 }

@@ -1,17 +1,17 @@
-public class AdvancedStats extends Stats //uses extra parameters to calculate with more complexity
+public class advancedStats extends stats //uses extra parameters to calculate with more complexity
 {
     private double hoursExercised;
     private double restingHeartRate;
     private boolean studyMusic;
 
-    public AdvancedStats(){
+    public advancedStats(){
         super();
         hoursExercised = 0;
         restingHeartRate = 70;
         studyMusic = false;
     }
 
-    public AdvancedStats(double work, double breaked, double notFocused, double eff, double slp, double hExercised, double rhr, boolean music){
+    public advancedStats(double work, double breaked, double notFocused, double eff, double slp, double hExercised, double rhr, boolean music){
         super(work, breaked, notFocused, eff, slp);
         hoursExercised = hExercised;
         restingHeartRate = rhr;
@@ -26,7 +26,7 @@ public class AdvancedStats extends Stats //uses extra parameters to calculate wi
         return restingHeartRate;
     }
 
-    public double usingStudyMusic(){
+    public boolean usingStudyMusic(){
         return studyMusic;
     }
 
@@ -34,8 +34,8 @@ public class AdvancedStats extends Stats //uses extra parameters to calculate wi
         return true;
     }
 
-    public double workScore(){
-        return scoreCalculator(getTimeWorked(), getTimeBreaked(), getTimeNotFocused(), getEfficiency(), getSleep(), hoursExercised, restingHeartRate, studyMusic);
+    public int workScore(){
+        return score.scoreCalculator(getTimeWork(), getTimeBreak(), getTimeNotFocused(), getEfficiency(), getSleep(), hoursExercised, restingHeartRate, studyMusic);
     }
 
 
