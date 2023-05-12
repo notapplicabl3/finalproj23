@@ -1,4 +1,4 @@
-public class stats
+public class stats // basic class
 {
     private double timeWorked; // total from start to finish (including breaks & not focused)
     private double timeBreaked; // includes water breaks, 5 minute walks, etc. does NOT include the breaks after finishing a work session
@@ -23,32 +23,43 @@ public class stats
 
     }
 
-    public double getTimeWork(){
+    public double getTimeWork(){ // returns timeWorked
         return timeWorked;
     }
 
-    public double getTimeBreak(){
+    public double getTimeBreak(){ // returns timeBreaked
         return timeBreaked;
     }
 
-    public double getTimeNotFocused(){
+    public double getTimeNotFocused(){ // returns TimeNotFocused
         return timeNotFocused;
     }
 
-    public double getEfficiency(){
+    public double getEfficiency(){ // returns efficiency
         return efficiency;
     }
 
-    public double getSleep(){
+    public double getSleep(){ // returns sleep
         return sleep;
     }
 
-    public boolean advanced(){
+    public boolean advanced(){ // returns if the objects is advanced stats or not (overridden)
         return false;
     }
 
-    public int workScore(){
+    public int workScore(){ // returns score (overriden if advanced)
         return score.scoreCalculator(timeWorked, timeBreaked, timeNotFocused, efficiency, sleep);
     }
 
+    public String toString(){
+        String ret = "";
+        ret += "Time Worked: " + timeWorked + "h\n";
+        ret += "Time Not Focused: " + timeNotFocused + "h\n";
+        ret += "Time Breaked: " + timeBreaked + "h\n";
+        ret += "Efficiency: " + efficiency + "\n";
+        ret += "Time Slept: " + sleep + "h\n";
+        ret += "Type of Stat: normal \n";
+
+        return ret;
+    }
 }

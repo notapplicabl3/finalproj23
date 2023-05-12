@@ -1,7 +1,7 @@
-public class score
+public class score // class for score calculating
 {
 
-    public static int scoreCalculator(double work, double breaked, double notFocused, double eff, double rest)
+    public static int scoreCalculator(double work, double breaked, double notFocused, double eff, double rest) // method if only normal stats object (overloaded)
     {
 
         if (work == 0){
@@ -22,7 +22,7 @@ public class score
 
         totalScore *= (1.05 - ( 1 / 2 ) * ( (rest - 8.5) / 8.5) ); // multiplies the final score by a factor relative to how much sleep the user got
 
-        int totalScoretruncated = (int) totalScore;
+        int totalScoretruncated = (int) totalScore; // truncates
 
 
         return totalScoretruncated;
@@ -32,7 +32,7 @@ public class score
 
 
 
-    public static int scoreCalculator(double work, double breaked, double notFocused, double eff, double rest, double exercise, double rh, boolean music)
+    public static int scoreCalculator(double work, double breaked, double notFocused, double eff, double rest, double exercise, double rh, boolean music) //method if advanced stats object (overloaded)
     {
 
         if (work == 0){
@@ -60,7 +60,7 @@ public class score
         totalScore *= (1.05 - ( 1 / 2 ) * ( (rest - 8.5) / 8.5) ); // multiplies the final score by a factor relative to how much sleep the user got
 
         
-        int totalScoretruncated = (int) totalScore;
+        int totalScoretruncated = (int) totalScore; // truncates
 
 
         return totalScoretruncated;
